@@ -5,10 +5,23 @@
 (function () {
     'use strict';
 
-    var gulp = require('gulp');
+    var gulp = require('gulp'),
+        connect = require('gulp-connect'),
+        open = require('gulp-open');
 
-    gulp.task('default', function () {
-        console.log('gulp enabled');
-    })
+    gulp.task('default', ['connect', 'open']);
+
+    gulp.task('connect', function () {
+        return connect.server({
+            root: 'client',
+            port: 8888
+        })
+
+    });
+
+    gulp.task('open', function () {
+        gulp.src('client/index.html')
+            .pipe(open('', {url: 'http://localhost:8888'}));
+    });
 
 })();
