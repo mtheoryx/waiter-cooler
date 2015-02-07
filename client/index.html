@@ -6,7 +6,7 @@
     <style type="text/css">
         [ng-cloak] {display: none !important;}
     </style>
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"></link>
 </head>
 <body ng-cloak>
 <div class="welcome" ng-controller="userCtrl">
@@ -17,7 +17,7 @@
 <div class="customers" ng-controller="customersCtrl">
     <ul>
         <li ng-repeat="customer in customerList">
-            {{customer.name}} - {{customer.rating}}
+            {{customer.name}} <br> <rating ng-model="customer.rating"></rating>
         </li>
     </ul>
 </div>

@@ -12,7 +12,7 @@ module.exports = function () {
             return {
                 id: n,
                 name: faker.name.findName(),
-                rating: 0
+                rating: _.random(0, 5)
             }
         })
     }

@@ -1,0 +1,109 @@
+{
+  "user": {
+    "id": 0,
+    "firstName": "Andrew",
+    "lastName": "Luck"
+  },
+  "customers": [
+    {
+      "id": 0,
+      "name": "Chelsey Hammes",
+      "rating": 0
+    },
+    {
+      "id": 1,
+      "name": "Marcel Armstrong",
+      "rating": 0
+    },
+    {
+      "id": 2,
+      "name": "Emelie Harber",
+      "rating": 0
+    },
+    {
+      "id": 3,
+      "name": "Colby Bartoletti",
+      "rating": 0
+    },
+    {
+      "id": 4,
+      "name": "Antonetta Jacobi",
+      "rating": 0
+    },
+    {
+      "id": 5,
+      "name": "Aiden Fahey",
+      "rating": 0
+    },
+    {
+      "id": 6,
+      "name": "Lucienne Muller PhD",
+      "rating": 0
+    },
+    {
+      "id": 7,
+      "name": "Ramon Carter",
+      "rating": 0
+    },
+    {
+      "id": 8,
+      "name": "Kristy Dooley",
+      "rating": 0
+    },
+    {
+      "id": 9,
+      "name": "Dayne Torp",
+      "rating": 0
+    },
+    {
+      "id": 10,
+      "name": "Eleonore Swift",
+      "rating": 0
+    },
+    {
+      "id": 11,
+      "name": "Ignatius Dickinson",
+      "rating": 0
+    },
+    {
+      "id": 12,
+      "name": "Elwin Goldner",
+      "rating": 0
+    },
+    {
+      "id": 13,
+      "name": "Chaya Batz",
+      "rating": 0
+    },
+    {
+      "id": 14,
+      "name": "Peyton Legros",
+      "rating": 0
+    },
+    {
+      "id": 15,
+      "name": "Carmine Blick",
+      "rating": 0
+    },
+    {
+      "id": 16,
+      "name": "Ramiro Quitzon IV",
+      "rating": 0
+    },
+    {
+      "id": 17,
+      "name": "Violette Boyle",
+      "rating": 0
+    },
+    {
+      "id": 18,
+      "name": "Bette Pagac",
+      "rating": 0
+    },
+    {
+      "id": 19,
+      "name": "Shawna Kirlin",
+      "rating": 0
+    }
+  ]
+}
