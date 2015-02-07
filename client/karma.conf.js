@@ -28,6 +28,7 @@ module.exports = function (config) {
             'components/customers/customers.js',
             'components/customers/customers_service.js',
             'components/customers/customers_service_test.js',
+            'components/**/*.js',
             'index.html'
         ],
 
