@@ -11,7 +11,8 @@ module.exports = function () {
         customers: _.times(20, function (n) {
             return {
                 id: n,
-                name: faker.name.findName()
+                name: faker.name.findName(),
+                rating: 0
             }
         })
     }

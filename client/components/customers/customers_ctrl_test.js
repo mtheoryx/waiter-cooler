@@ -15,27 +15,33 @@ describe(' controller > ', function() {
         mockCustomers = [
             {
                 "id": 0,
-                "name": "Bethel Zboncak"
+                "name": "Bethel Zboncak",
+                "rating":0
               },
               {
                 "id": 1,
-                "name": "Chasity Rohan"
+                "name": "Chasity Rohan",
+                "rating":0
               },
               {
                 "id": 2,
-                "name": "Ahmad Langosh"
+                "name": "Ahmad Langosh",
+                  "rating":0
               },
               {
                 "id": 3,
-                "name": "Dr. Luigi Miller"
+                "name": "Dr. Luigi Miller",
+                  "rating":0
               },
               {
                 "id": 4,
-                "name": "Ophelia Gislason"
+                "name": "Ophelia Gislason",
+                  "rating":0
               },
               {
                 "id": 5,
-                "name": "Mrs. Keara Olson"
+                "name": "Mrs. Keara Olson",
+                  "rating":0
               },
               {
                 "id": 6,
@@ -63,6 +69,7 @@ describe(' controller > ', function() {
             $scope.$apply();
             expect($scope.customerList).toBeDefined();
             expect($scope.customerList).toBe(mockCustomers);
+            expect($scope.customerList[0].rating).toBeDefined();
         });
     })
 });

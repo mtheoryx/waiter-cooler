@@ -19,6 +19,8 @@ module.exports = function (config) {
         files: [
             'bower_components/angular/angular.min.js',
             'bower_components/angular-mocks/angular-mocks.js',
+            'bower_components/angular-bootstrap/ui-bootstrap.min.js',
+            'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js',
             'app.js',
             'app_test.js',
             'components/user/user.js',
