@@ -6,12 +6,25 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     open = require('gulp-open'),
     karma = require('gulp-karma'),
-    protractor = require("gulp-protractor").protractor,
-    webdriver_standalone = require("gulp-protractor").webdriver_standalone,
-    webdriver_update = require("gulp-protractor").webdriver_update,
-    gutil = require("gulp-util");
+    protractor = require('gulp-protractor').protractor,
+    webdriver_standalone = require('gulp-protractor').webdriver_standalone,
+    webdriver_update = require('gulp-protractor').webdriver_update,
+    gutil = require('gulp-util'),
+    shell = require('gulp-shell');
 
 gulp.task('default', ['live-connect', 'open', 'live-test', 'watch']);
+
+/*
+* API Server Utilities
+* */
+
+gulp.task('server:start', shell.task([
+        'pwd',
+        'json-server db.json'
+    ], {
+        cwd: './server'
+    }
+));
 
 var watchfiles = [
     'client/index.html',
