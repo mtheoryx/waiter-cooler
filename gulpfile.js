@@ -101,11 +101,11 @@ gulp.task('test:e2e', ['webdriver_update', 'connect'], function () {
         }))
         .on('error', function () {
             connect.serverClose();
-            process.exit(1)
+            //process.exit(1); //For CI enviroments only
         })
         .on('end', function () {
             connect.serverClose();
-            process.exit(0)
+            //process.exit(0); //For CI enviroments only
         })
 
 });

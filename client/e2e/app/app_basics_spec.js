@@ -1,7 +1,12 @@
-describe('waiter-cooler homepage', function() {
-  it('should have a title', function() {
-    browser.driver.get('http://localhost:8888/');
+'use strict';
 
-    expect(browser.driver.getTitle()).toEqual('Big Angular App');
-  });
+describe('waiter-cooler homepage', function() {
+    it('should have a title', function() {
+        browser.get('http://localhost:8888/');
+        expect(browser.getTitle()).toEqual('Big Angular App');
+    });
+    it('should have a welcome message', function() {
+        browser.get('http://localhost:8888/');
+        expect(browser.element(by.id('greeting')).getText()).toEqual('Hello World!');
+    });
 });

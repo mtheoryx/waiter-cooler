@@ -10,16 +10,8 @@ exports.config = {
                     'default_directory': '/tmp'
                 }
             }
-        },
-        shardTestFiles: (process.env.maxInstances > 1),
-        maxInstances: process.env.maxInstances
+        }
     },
     baseUrl: 'http://localhost:8888',
-    allScriptsTimeout: 200000,
-    jasmineNodeOpts: {
-        isVerbose: true,
-        showColors: true,
-        includeStackTrace: true,
-        defaultTimeoutInterval: 600000
-    }
+    allScriptsTimeout: 200000
 };
