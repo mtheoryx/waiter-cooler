@@ -5,7 +5,6 @@ angular.module('customers')
                 var deferred = $q.defer();
                 $http.get('http://localhost:3000/customers')
                     .success(function (data) {
-                        console.log(data);
                         deferred.resolve(data);
                     })
                     .error(function (msg) {
