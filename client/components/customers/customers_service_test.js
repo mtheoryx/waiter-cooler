@@ -30,5 +30,23 @@ describe('customerSvc > ', function() {
 
         }));
     });
+    describe('updateCustomerRationg method > ', function() {
+        it('should call the correct route', function() {
+            var ratingPayload = {
+                rating:2
+            };
+            $httpBackend.when('PUT', 'http://localhost:3000/customers/2', ratingPayload).respond(200, [{"test":"test"}]);
+
+            $httpBackend.expectPUT('http://localhost:3000/customers/2', ratingPayload);
+
+            var customerSvcPromise = customersSvc.updateCustomerRating(2,2);
+            customerSvcPromise.then(function (response) {
+                expect(response).toBeTruthy();
+            });
+
+
+            $httpBackend.flush();
+        });
+    });
 
 });

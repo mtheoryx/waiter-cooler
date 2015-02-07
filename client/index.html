@@ -17,7 +17,7 @@
 <div class="customers" ng-controller="customersCtrl">
     <ul>
         <li ng-repeat="customer in customerList">
-            {{customer.name}} <br> <rating ng-model="customer.rating"></rating>
+            {{customer.name}} <br> <rating ng-click="updateCustomerRating(customer)" ng-model="customer.rating"></rating>
         </li>
     </ul>
 </div>
