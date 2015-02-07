@@ -20,7 +20,12 @@ module.exports = function (config) {
             'bower_components/angular/angular.min.js',
             'bower_components/angular-mocks/angular-mocks.js',
             'app.js',
-            'app_test.js'
+            'app_test.js',
+            'components/user/user.js',
+            'components/user/user_ctrl.js',
+            'components/user/user_service.js',
+            'components/user/user_service_test.js',
+            'index.html'
         ],
 
 
