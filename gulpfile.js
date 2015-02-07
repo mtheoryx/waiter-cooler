@@ -7,7 +7,8 @@
 
     var gulp = require('gulp'),
         connect = require('gulp-connect'),
-        open = require('gulp-open');
+        open = require('gulp-open'),
+        karma = require('gulp-karma');
 
     gulp.task('default', ['connect', 'open']);
 
@@ -23,5 +24,18 @@
         gulp.src('client/index.html')
             .pipe(open('', {url: 'http://localhost:8888'}));
     });
+
+    gulp.task('test:unit', function () {
+        return gulp.src('./client/app_test.js, ./client/**/*_test.js')
+            .pipe(karma({
+                configFile: './client/karma.conf.js',
+                action: 'run',
+                singleRun: true,
+                port: 8889
+            }))
+            .on('error', function (err) {
+                throw err;
+            })
+    })
 
 })();
