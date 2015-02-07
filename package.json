@@ -18,6 +18,7 @@
   "homepage": "https://github.com/mtheoryx/waiter-cooler",
   "devDependencies": {
     "bower": "^1.3.12",
+    "faker": "^2.1.2",
     "gulp": "^3.8.10",
     "gulp-connect": "^2.2.0",
     "gulp-jasmine": "^2.0.0",
@@ -32,6 +33,7 @@
     "karma-html2js-preprocessor": "^0.1.0",
     "karma-jasmine": "^0.3.5",
     "karma-phantomjs-launcher": "^0.1.4",
+    "lodash": "^3.1.0",
     "protractor": "^1.6.1"
   }
 }

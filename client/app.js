@@ -2,6 +2,7 @@
     'use strict';
 
     var waiterApp = angular.module('waiterApp', [
-        'user'
+        'user',
+        'customers'
     ]);
 })();

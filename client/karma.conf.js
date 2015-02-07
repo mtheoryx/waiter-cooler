@@ -25,6 +25,9 @@ module.exports = function (config) {
             'components/user/user_ctrl.js',
             'components/user/user_service.js',
             'components/user/user_service_test.js',
+            'components/customers/customers.js',
+            'components/customers/customers_service.js',
+            'components/customers/customers_service_test.js',
             'index.html'
         ],
 
@@ -35,7 +38,8 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'app.js': ['coverage']
+            'app.js': ['coverage'],
+            'components/**/!(*_test).js': ['coverage']
         },
 
         // test results reporter to use
