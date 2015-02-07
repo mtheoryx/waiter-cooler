@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Big Angular App</title>
+    <style type="text/css">
+        [ng-cloak] {display: none !important;}
+    </style>
 </head>
-<body>
-<h1 id="greeting">Hello World!</h1>
+<body ng-cloak>
+<div class="welcome" ng-controller="userCtrl">
+    <h1 id="greeting">
+        {{user.greeting}}
+    </h1>
+</div>
+
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="app.js"></script>
+<script src="components/user/user.js"></script>
+<script src="components/user/user_ctrl.js"></script>
+<script src="components/user/user_service.js"></script>
 </body>
 </html>

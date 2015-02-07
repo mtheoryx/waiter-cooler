@@ -1,5 +1,7 @@
 (function () {
     'use strict';
 
-    var waiterApp = angular.module('waiterApp', []);
+    var waiterApp = angular.module('waiterApp', [
+        'user'
+    ]);
 })();

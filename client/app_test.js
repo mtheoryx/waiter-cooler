@@ -6,4 +6,8 @@ describe('App Loading >', function() {
 
 describe('Load angular and verify main module loads', function() {
     beforeEach(module('waiterApp'));
+
+    describe('Main Angular Module', function() {
+
+    });
 });
