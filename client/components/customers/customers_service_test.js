@@ -14,19 +14,19 @@ describe('customerSvc > ', function() {
         $httpBackend.verifyNoOutstandingRequest();
     });
 
-    describe(' method > ', function() {
-        it('', inject(function ($http, $httpBackend) {
-            //$httpBackend.when().respond();
-            //
-            //$httpBackend.expectGET();
+    describe('getAllCustomers method > ', function() {
+        it('should call the correct route', inject(function ($http, $httpBackend) {
+            $httpBackend.when('GET', 'http://localhost:3000/customers').respond(200, [{"test":"test"}]);
+
+            $httpBackend.expectGET('http://localhost:3000/customers');
 
             var customerSvcPromise = customersSvc.getAllCustomers();
-            customerSvcPromise.then(function () {
-
+            customerSvcPromise.then(function (response) {
+                expect(response).toBeTruthy();
             });
 
 
-            //$httpBackend.flush();
+            $httpBackend.flush();
 
         }));
     });

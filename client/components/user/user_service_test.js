@@ -17,9 +17,9 @@ describe('userSvc > ', function() {
     
     describe('getOnlyUser method > ', function() {
         it('should call the appropriate route for the service', inject(function ($http, $httpBackend) {
-            $httpBackend.when('GET', 'http://localhost:3000/users').respond(200, [{"test":"test"}]);
+            $httpBackend.when('GET', 'http://localhost:3000/user').respond(200, [{"test":"test"}]);
 
-            $httpBackend.expectGET('http://localhost:3000/users');
+            $httpBackend.expectGET('http://localhost:3000/user');
 
             var getOnlyUserPromise = userSvc.getOnlyUser();
             getOnlyUserPromise.then(function (response) {
@@ -29,9 +29,9 @@ describe('userSvc > ', function() {
 
         }));
         it('should reject the promise correctly in case of server error', function() {
-            $httpBackend.when('GET', 'http://localhost:3000/users').respond(500);
+            $httpBackend.when('GET', 'http://localhost:3000/user').respond(500);
 
-            $httpBackend.expectGET('http://localhost:3000/users');
+            $httpBackend.expectGET('http://localhost:3000/user');
 
             var getOnlyUserPromise = userSvc.getOnlyUser();
             getOnlyUserPromise.then(function (response) {

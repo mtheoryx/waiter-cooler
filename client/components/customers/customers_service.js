@@ -3,7 +3,15 @@ angular.module('customers')
         return {
             getAllCustomers: function () {
                 var deferred = $q.defer();
-                deferred.resolve('');
+                $http.get('http://localhost:3000/customers')
+                    .success(function (data) {
+                        console.log(data);
+                        deferred.resolve(data);
+                    })
+                    .error(function (msg) {
+                        deferred.reject(msg)
+                    });
+
                 return deferred.promise;
             }
         }

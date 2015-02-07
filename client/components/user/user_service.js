@@ -6,9 +6,9 @@
                 getOnlyUser: function () {
                     var deferred = $q.defer();
 
-                    $http.get('http://localhost:3000/users')
+                    $http.get('http://localhost:3000/user')
                         .success(function (data) {
-                            deferred.resolve(data[0]);
+                            deferred.resolve(data);
                         })
                         .error(function (msg) {
                             deferred.reject(msg);
